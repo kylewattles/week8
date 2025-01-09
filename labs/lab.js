@@ -273,7 +273,7 @@ console.log(`--------------------------
         this.director = director
       }
       describe() {
-        console.log(`The movie ${this.title} was directed by ${this.director}.`); 
+        return `The movie ${this.title} was directed by ${this.director}.`; 
         }
       }
       class List {
@@ -290,12 +290,12 @@ console.log(`--------------------------
       }
       let movie1 = new Movie("Jurassic Park", "Steven Spielberg")
       let movie2 = new Movie("How the Grinch stole Christmas", "Ron Howard")
-      movie1.describe()
-      movie2.describe()
+      //movie1.describe()
+      //movie2.describe()
       let list = new List()
       list.addMovie(movie1)
       list.addMovie(movie2)
-      console.log(list.movies[0]);
+      console.log(list.movies[1].describe(), list.movies[0].describe());
       
       
       
