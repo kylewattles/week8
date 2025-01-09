@@ -1,5 +1,4 @@
 
-
 /*create class with student info and names*/
 class Student {
     constructor(firstName, lastName, phoneNumber, grade){
@@ -20,7 +19,6 @@ let student2 = new Student("Gabriella", "Hart", "123-456-7890", "A")
 /*calling the function*/
 student1.introduce();
 student2.introduce();
-
 class bear {
     constructor(color, size, region, danger){
         this.color = color;
@@ -35,11 +33,9 @@ class bear {
 }
 let panda = new bear("black and white", "medium", "China", "relatively low");
 let polarBear = new bear("white", "huge", "arctic", "very high");
-
 panda.bearTraits();
 polarBear.bearTraits();
 /*how can i make this into a function that will take in the descriptions of the bears and give me what type of bear it is? would it use if statements?*/
-
 class notificationSender {
     constructor(status) {
         this.status = status;
@@ -52,7 +48,6 @@ class notificationSender {
          return users;
      }
 }
-
 class promotionSender extends notificationSender{
     constructor(status){
         super(status);
@@ -67,7 +62,6 @@ class promotionSender extends notificationSender{
         return 0;
     }
 }
-
 class CollectionsSender extends notificationSender {
     constructor(status){
         super(status);
@@ -81,22 +75,16 @@ class CollectionsSender extends notificationSender {
         return 5;
     }
 }
-
 let collectionsSender = new CollectionsSender("OVERDUE");
 collectionsSender.sendNotification("this is a test collections notification");
-
 /*introduction to handling errors*/
-
 try{
 List.push("hello");
 } catch(err) {
 console.log(err);
 }
-
 console.log("goodbye");
-
 /*menu app*/
-
 class Player {
     constructor(name, position) {
        this.name = name;
@@ -111,7 +99,6 @@ class team {
     this.name = name;
     this.players = [];
    } 
-
 addPlayer(player) {
     if(player instanceof Player) {
         this.players.push(player);
@@ -123,7 +110,6 @@ addPlayer(player) {
     return `${this.name} has ${this.players.length} players.`
   }
 }
-
 class Menu {
     constructor() {
         this.teams = [];
@@ -164,7 +150,6 @@ class Menu {
             4) display all teams
             `);
     }
-
     showTeamMenuOptions(teamInfo) {
         return prompt(`
             0) back
@@ -174,7 +159,6 @@ class Menu {
             ${teamInfo}
             `);
     }
-
    displayTeams() {
     let teamString = " ";
     for (let i = 0; i < this.teams.length; i++){
@@ -182,12 +166,10 @@ class Menu {
     }
     alert(teamString);
    }
-
    createTeam() {
     let name = prompt("Enter a name for your new team.")
     this.teams.push(new team(name));
    }
-
    viewTeam() {
     let index = prompt("Enter the index of the team you wish to view");
     if (index > -1 && index < this.teams.length) {
@@ -207,13 +189,11 @@ class Menu {
       }
     }
   }
-
   createPlayer() {
     let name = prompt("Enter name for new player.");
     let position = prompt("enter position for new player");
     this.selectedTeam.players.push(new player(name, position));
   }
-
   deletePlayer() {
     let index = prompt("enter thge index of the player you wish to delete: ");
     if (index > -1 && index < this.selectedTeam.players.length) {
@@ -221,6 +201,5 @@ class Menu {
     }
   }
 }
-
 let menu = new Menu();
 menu.start();
