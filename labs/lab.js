@@ -277,11 +277,11 @@ console.log(`--------------------------
         }
       }
       class List {
-        constructor(movies){
+        constructor(){
           this.movies = []
         }
         addMovie(movie){
-          return movie.push.movies
+          return this.movies.push(movie)
         }
         displayMovies(){
          for (i = 0; i < this.movies.length; i++)
@@ -292,6 +292,11 @@ console.log(`--------------------------
       let movie2 = new Movie("How the Grinch stole Christmas", "Ron Howard")
       movie1.describe()
       movie2.describe()
+      let list = new List()
+      list.addMovie(movie1)
+      list.addMovie(movie2)
+      console.log(list.movies[0]);
+      
       
       
     
