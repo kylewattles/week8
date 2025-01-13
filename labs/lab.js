@@ -236,9 +236,9 @@ console.log(`--------------------------
      *
      * ↓ YOUR CODE HERE ↓ */
       class Child extends Parent {
-        constructor(name, age) {
-          super(name);
-          this.age = age
+        constructor(name, age, old) {
+          super(name, age);
+          this.old = old
         }
         details() {
           console.log(`${this.name} ${this.age}`);
